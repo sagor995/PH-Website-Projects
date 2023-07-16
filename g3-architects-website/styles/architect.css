@@ -113,8 +113,35 @@ main {
   font-weight: 700;
 }
 
+/* facts section starts */
+
 .facts-description {
   max-width: 542px;
+}
+
+.facts-card-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.facts-card-container .card {
+  border-radius: 8px;
+  border: 1px solid #ff900e;
+  text-align: center;
+  padding: 30px;
+}
+
+.facts-card-container .card-stats {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.facts-card-container .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 5px;
 }
 
 /* Responsive media queries */
@@ -125,15 +152,20 @@ main {
     padding: 20px;
   }
   nav,
-  .teams-container {
+  .teams-container,
+  .facts-card-container {
     flex-direction: column;
   }
   .teams-img-container {
     grid-template-columns: 1fr;
   }
-  .teams-content {
+  .teams-content,
+  .facts-card-container {
     padding-right: 20px;
     padding-left: 20px;
+  }
+  .facts-card-container {
+    gap: 20px;
   }
 }
 
@@ -145,5 +177,9 @@ main {
   nav,
   .teams-container {
     flex-direction: column;
+  }
+
+  .facts-card-container {
+    gap: 20px;
   }
 }
